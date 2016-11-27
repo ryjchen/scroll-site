@@ -1,0 +1,320 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Varela Round', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+p {
+  font-size: .95em;
+  margin-bottom: 1.8em;
+}
+.name a {
+  color: #000;
+}
+h2,
+h3, 
+h4 {
+  margin-top: 0;
+  margin-bottom: 1%;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 3%;
+}
+h4 {
+  color: #3acec2 !important;
+}
+.black {
+  color: #000 !important;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+
+/* ================================ 
+  Base Layout Styles
+==================================== */
+/* ---- Navigation ---- */
+.name a,
+.navbar a {
+  text-align: center;
+  display: inline-block;
+}
+.navbar {
+  margin-top: 0;
+  padding: 6px 5% 0 5%; 
+}
+
+/* ---- Header and Footer ---- */
+.main-header {
+  margin-bottom: 5%;
+  margin-top: 10%;
+  text-align: center;
+}
+.name {
+  font-size: 1.65em;
+  letter-spacing: .15em;
+  font-weight: 800;
+  line-height: 1;
+}
+footer {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  position: static;
+  bottom: 0;
+  width: 100%;
+}
+.copyright {
+  padding: 1% 0;
+  font-weight: 100;
+  letter-spacing: .15em;
+}
+
+/* ---- Page Elements ---- */
+.photo {
+  position: relative;
+  line-height: 0;
+  margin-bottom: 1.5em;
+  overflow: hidden;
+}
+.textstroke {
+  color: white;
+  font-weight: 200;
+  font-size: 1em;
+  letter-spacing: .2em;
+}
+.internal {
+  color: #3acec2;
+}
+.internal-size{
+  font-size: 1.1em;
+  margin-bottom: 2%;
+}
+
+/* --------------------------
+  SVG Styles
+--------------------------- */
+.svg-logo {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 2%;
+  padding-left: 1%;
+}
+@-webkit-keyframes offset {
+ 100% {
+    stroke-dashoffset: 0;
+  } 
+} /*for my RYC svg*/
+
+/***************************************
+ PAGE: PORTFOLIO 
+****************************************/
+/* ---- Photo Overlay ---- */
+.photo-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0; 
+  left: 0;
+  padding: 0 20px;
+
+  display: flex; /* For centering text inside .photo-overlay */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.port {
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+/***************************************
+ PAGE: ABOUT
+****************************************/
+.profile-photo {
+  display: block;
+  max-width: 200px;
+  margin: 0 auto 30px;
+  border-radius: 100%;
+}
+.about-container{
+  margin: 8% 10% 0 10%;
+  padding: 3% 10%; 
+}
+
+/***************************************
+ PAGE: CONTACT
+****************************************/
+.contact-info a {
+  color: #3acec2;
+}
+.contact-info {
+  padding-left: 0;
+  padding-right: 25%;
+}
+.contact-info li {
+  display: block;
+  max-width: 100%;
+  padding-bottom: 5px;
+}
+.contact-container {
+  margin: 10%;
+  padding-bottom: 5%;
+  float: none;
+}
+
+/***************************************
+ PICTURES
+****************************************/
+.about-row,
+.gallery {
+  justify-content: center;  
+  padding: 3% 10%;  
+}
+
+.ideation,
+.fbdesignjam {
+  justify-content: center;  
+  padding: 2% 10%;  
+  margin: 20px 5% 40px 5%;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+@media (max-width: 768px) {
+  .textstroke {
+    display: none;
+    font-weight: 100;
+  }
+  .mobile {
+    font-size: 1em;
+    font-weight: 575;
+    padding-top: 4%;
+    padding-bottom: 3%;
+    color: white;
+    text-decoration: none;
+  }
+  .photo {
+    margin-bottom: 0;
+  }
+  .svg-logo {
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 1%;
+  }
+  .navbar a {
+    display: block;
+  }
+  .name {
+    font-size: 1.5em;
+  }
+  .main-header {
+    margin-top: 15%;
+  }
+  .port-row {
+    text-align: center;
+  }
+  .contact-info {
+    padding-right: 35%;
+  }
+  h1 {
+    margin-top: 0 !important;
+  }
+
+}
+/***************************************
+ Mobile Screen
+****************************************/
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .name {
+    font-size: 1.55em;
+    letter-spacing: .15em;
+    margin: 0;
+    padding-top: 15px;
+  }
+  .profile-photo {
+    display: block;
+    margin: 0 auto;
+  }
+  .photo-overlay {
+    background: rgba(0,0,0, .75);
+  }
+  .profile-photo {
+    float: left;
+    margin: 0 6% 1% 0;
+  }
+  .pics {
+    width: 30%;
+  }
+  .grow {
+    transition: all .3s ease-in-out;
+  }
+  .grow:hover {
+    transform: scale(2);
+  }
+  .grow-horz:hover {
+    transform: scale(2.5);
+  }
+
+  /* Header Animation for Tablet and Full Size Screens */
+  .r,
+  .y,
+  .c {
+    stroke: #000;
+    stroke-width: 8;
+  }
+  .r {
+    stroke-dasharray: 550;
+    stroke-dashoffset: 550;
+    -webkit-animation: offset 2.6s linear forwards; 
+  }
+  .y {
+    stroke-dasharray: 180;
+    stroke-dashoffset: 180;
+    -webkit-animation: offset 2s linear forwards; 
+  }
+  .c {
+    stroke-dasharray: 325;
+    stroke-dashoffset: 325;
+    -webkit-animation: offset 2s linear forwards; 
+  }
+
+  /* ================================= 
+  Photo Overlay Transitions
+==================================== */
+.photo-overlay {
+  opacity: 0;
+  transition: opacity .5s;
+}
+.photo-overlay:hover {
+  opacity: 1;
+}
+
+/* ================================= 
+  Image Transforms & Transitions
+==================================== */
+  img {
+    transition: transform .5s cubic-bezier(.7, -0.39, .31, 1.38);
+    transform-origin:  0 0;
+  }
+  .photo img {
+    transform-origin: 0 0;  
+  }
+  .photo:hover img {
+    transform: scale(1.05);
+  }
+}

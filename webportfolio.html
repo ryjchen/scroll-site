@@ -8,7 +8,7 @@
 
   <title>Rebecca Chen | UX Designer</title>
 
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap-social.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -35,6 +35,23 @@
     padding: 2%;
     letter-spacing: .15em;
   }
+  .navbar-toggle {
+    color: #3acec2;
+    border-color: #3acec2 !important;
+  }
+  #brand-img {
+    /*height: 40px;*/
+    max-width: 90px;
+    margin-top: -10px;
+  }
+  .navbar-inverse {
+    background-color: #000;
+  }
+  .navbar-custom .navbar-nav > .active > a {
+    border-radius: 0;
+    color: white;
+    background-color: #3acec2;
+  }
   .white {
     color: white;
   }
@@ -48,47 +65,74 @@
     border: 2px solid #3acec2;
     color: #3acec2;
   }
-  footer {
-    text-align: center;
-    background-color: #222;
-    color: #fff;
-    position: static;
-    bottom: 0;
-    width: 100%;
-  }
   .btn-social-icon {
-    background-color: #333;
+    background-color: #222;
+    color: #3acec2;
   }
   </style>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="100">
+<body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="100">
   
+  <!-- Header -->
   <div id="home" class="container-fluid">
     <header class="main-header"> 
-    <svg class="svg-logo" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-       width="419.5px" height="120px" viewBox="0 0 419.5 164" enable-background="new 0 0 419.5 164" xml:space="preserve">
-      <g class="logo">
-        <path class="r" fill="none" stroke="#000000" stroke-width="9" d="M21.607,155.277v-139.9c0,0,50.921-4.5,82.894,4.624
-              c20.148,5.75,30.393,16.801,30.393,35.9c0,0,3.263,42.137-59.446,43.087l56.262,53.841"/>
-        <polyline class="y" fill="none" stroke="#000000" stroke-width="9" points="147.833,11.132 205.797,83.145 263,11.601 "/>
-        <line class="y" fill="none" stroke="#000000" stroke-width="9" x1="205.417" y1="83" x2="205.417" y2="155.667"/>
-        <path class="c" fill="none" stroke="#000000" stroke-width="9" d="M381.486,52.701c0,0-14.237-38.04-52.966-37.939
-              c0,0-45.266-3.873-53.632,53.238c0,0-12.254,81.487,56.449,82.18c0,0,44.476,2.764,50.634-39.708"/>
-      </g>
-    </svg>
+      <div class="container header-container">
+        <svg class="svg-logo" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           width="419.5px" height="120px" viewBox="0 0 419.5 164" enable-background="new 0 0 419.5 164" xml:space="preserve">
+          <g class="logo">
+            <path class="r" fill="none" stroke="#000000" stroke-width="9" d="M21.607,155.277v-139.9c0,0,50.921-4.5,82.894,4.624
+                  c20.148,5.75,30.393,16.801,30.393,35.9c0,0,3.263,42.137-59.446,43.087l56.262,53.841"/>
+            <polyline class="y" fill="none" stroke="#000000" stroke-width="9" points="147.833,11.132 205.797,83.145 263,11.601 "/>
+            <line class="y" fill="none" stroke="#000000" stroke-width="9" x1="205.417" y1="83" x2="205.417" y2="155.667"/>
+            <path class="c" fill="none" stroke="#000000" stroke-width="9" d="M381.486,52.701c0,0-14.237-38.04-52.966-37.939
+                  c0,0-45.266-3.873-53.632,53.238c0,0-12.254,81.487,56.449,82.18c0,0,44.476,2.764,50.634-39.708"/>
+          </g>
+        </svg>
+         
+        <h1 class="name"><a href="#home">REBECCA Y. CHEN</a></h1>
+      </div>
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-inverse navbar-custom navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span> Menu <span class="fa fa-bars"></span>
+          </button>
     
-     
-      <h1 class="name"><a href="#home">REBECCA Y. CHEN</a></h1>
-        <nav class="navbar navbar-fixed-top navbar-static-top">
-          <a href="#home" class="selected">HOME</a>
-          <a href="#about">ABOUT</a>
-          <a href="#portfolio">PORTFOLIO</a>
-          <a href="#contact">CONTACT</a>
-          <a href="files/resume.pdf" download="Rebecca Chen's Resume">RESUME</a>
-        </nav>
+          <a href="#home" class="navbar-brand">
+            <img id="brand-img" src="img/logoblack.png" alt="">
+          </a>
+        </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" style="margin-right: 1%;">
+                    <li class="hidden">
+                        <a href="#home"></a>
+                    </li>
+                    <li class="active">
+                      <a href="#home">HOME</a>
+                    </li>
+                    <li>
+                      <a class="page-scroll" href="#about">ABOUT</a>
+                    </li>
+                    <li>
+                      <a class="page-scroll" href="#portfolio">PORTFOLIO</a>
+                    </li>
+                    <li>
+                      <a class="page-scroll" href="#contact">CONTACT</a>
+                    </li>
+                    <li>
+                      <a href="files/resume.pdf">RESUME</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     </header>
 
+    <!-- Jumbotron Home Page -->
     <div class="jumbotron">
       <div class="container">
         <h2 class="jt-caption">USER EXPERIENCE DESIGNER</h2> <br>
@@ -104,7 +148,7 @@
     </div>
   </div>
 
-    <!-- ABOUT ME -->
+  <!-- ABOUT ME -->
   <div id="about" class="container-fluid">
     <div class="container about-container">
       <div class="row">
@@ -126,7 +170,6 @@
           <h4 class="black">EDUCATION</h4>
           <h5>UNIVERSITY OF MICHIGAN, ANN ARBOR</h5>
           <h6>Master of Science in Information<br>2018</h6>
-          <br>
           <h5>UNIVERSITY OF CALIFORNIA, IRVINE</h5>
           <h6>Cognitive Sciences B.S. (Honors)<br>Management Minor<br>2015</h6>
         </div>
@@ -134,7 +177,7 @@
     </div>
   </div>
 
-    <!-- PORTFOLIO  -->
+  <!-- PORTFOLIO  -->
   <div id="portfolio" class="container-fluid" style="background-color: #333">
     <div class="container port">
       <h4 style="color: #3acec2">PORTFOLIO</h4>
@@ -179,7 +222,7 @@
   </div>
 </div>
 
-  <!-- CONTACT ME -->
+<!-- CONTACT ME -->
 <div id="contact" class="container-fluid">
   <div class="container contact-container">
       <div class="row">
@@ -201,41 +244,42 @@
       </div>
 
     </div>
+  </div>
 
-
-
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <span>COPYRIGHT &copy; 2016 REBECCA CHEN</span>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-inline social-buttons">
-              <li>
-                <a href="https://www.linkedin.com/in/rebeccaychen" class="btn btn-social-icon btn-linkedin">
-                  <span class="fa fa-linkedin"></span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/rebschen" class="btn btn-social-icon btn-facebook">
-                  <span class="fa fa-facebook"></span>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/rebeccaychen" class="btn btn-social-icon btn-twitter">
-                  <span class="fa fa-twitter"></span>
-                </a>
-              </li>
-            </ul>
-          </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 copyright">
+          <span>COPYRIGHT &copy; 2016 REBECCA CHEN</span>
+        </div>
+        <div class="col-md-12 copyright">
+          <ul class="list-inline social-buttons">
+            <li>
+              <a href="https://www.linkedin.com/in/rebeccaychen" class="btn btn-social-icon btn-linkedin">
+                <span class="fa fa-linkedin"></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/rebschen" class="btn btn-social-icon btn-facebook">
+                <span class="fa fa-facebook"></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/rebeccaychen" class="btn btn-social-icon btn-twitter">
+                <span class="fa fa-twitter"></span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-  
+  <!-- Javascript and jQuery   -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  
 </body>
 
 </html>
